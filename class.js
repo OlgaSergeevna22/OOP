@@ -26,13 +26,14 @@ function Shop(title, address) {
     }
 }
 
-let shop1 = new Shop('Green', 'ул. Петра Мстиславца 11, Минск');
-console.log(shop1.createGreen());
-let shop2 = new Shop('ProStore', 'пр-т Дзержинского, 126, Минск');
-console.log(shop2.createProStore());
+let green = new Shop('Green', 'ул. Петра Мстиславца 11, Минск');
+console.log(green.createGreen());
+
+let proStore = new Shop('ProStore', 'пр-т Дзержинского, 126, Минск');
+console.log(proStore.createProStore());
 
 let shops = [];
-shops.push(shop1.createGreen(), shop2.createProStore());
+shops.push(green.createGreen(), proStore.createProStore());
 console.log(shops);
 let arrAddress = shops.map(item => item.address)
 console.log(arrAddress);
