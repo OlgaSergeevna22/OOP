@@ -29,26 +29,38 @@
 
 // // С методами в конструкторе
 
-function Shop(title, address) {
-    this.title = title;
-    this.address = address;
+// function Shop(title, address) {
+//     this.title = title;
+//     this.address = address;
 
-    this.createShop = function() {
-        return {
-            title: this.title,
-            address: this.address
-        }
-    };
+//     this.createShop = function() {
+//         return {
+//             title: this.title,
+//             address: this.address
+//         }
+//     };
+// }
+
+// let green = new Shop('Green', 'ул. Петра Мстиславца 11, Минск');
+// console.log(green.createShop());
+
+// let proStore = new Shop('ProStore', 'пр-т Дзержинского, 126, Минск');
+// console.log(proStore.createShop());
+
+// let shops = [];
+// shops.push(green.createShop(), proStore.createShop());
+// console.log(shops);
+// let arrAddress = shops.map(item => item.address)
+// console.log(arrAddress);
+
+
+class Shop {
+    constructor(title, address) {
+        this.title = title;
+        this.address = address;
+    }
 }
 
-let green = new Shop('Green', 'ул. Петра Мстиславца 11, Минск');
-console.log(green.createShop());
-
-let proStore = new Shop('ProStore', 'пр-т Дзержинского, 126, Минск');
-console.log(proStore.createShop());
-
-let shops = [];
-shops.push(green.createShop(), proStore.createShop());
-console.log(shops);
-let arrAddress = shops.map(item => item.address)
-console.log(arrAddress);
+const green = new Shop('Green', 'ул. Петра Мстиславца 11, Минск');
+const proStore = new Shop('ProStore', 'пр-т Дзержинского, 126, Минск');
+console.log(typeof green);
