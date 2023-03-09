@@ -8,7 +8,6 @@ class Logo {
     }
 
     init() {
-        // метод должен создать тег img
         const img = document.createElement('img');
         img.src = this.imgUrl;
         const body = document.querySelector('body');
@@ -57,14 +56,12 @@ class Circle {
         div.style.height = `${this.height}px`;
         div.style.borderRadius = `${50}px`;
         div.style.background = this.color
-        console.log(div);
-
     }
 }
 const imgUrl = 'https://bit.ly/2tcDito';
 const mfLogotip = new Logo(imgUrl);
 console.log(mfLogotip);
-// запускаем наше микро-приложение
+
 mfLogotip.init();
 
 
